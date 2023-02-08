@@ -14,7 +14,7 @@ import { ThemeContext } from './Context/ThemeContext';
 
 function App() {
 
-  const {theme,setTheme}=useState('dark');
+  const [theme,setTheme] = useState('dark');
 
   return (
     <div className={`App bg-${theme}`} dir={theme == "dark" ? "light" : "dark"} >

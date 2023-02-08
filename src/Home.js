@@ -52,7 +52,7 @@ const PaginationProduct=(e) => {
 // ##################################################################################################  
 
     return(
-    <div className="container-fluid bg-dark">
+    <div className="container-fluid">
         <div className="row pb-5 gy-5">
 {/* =============================== search ============================== */}
     <div className="">

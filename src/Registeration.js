@@ -118,37 +118,37 @@ const submitUserData = (e) => {
 // ==================================== return ====================================
 
     return (
-        <div style={{height : "93.1vh"}} className=" container-fluid bg-dark position-relative">
+        <div style={{height : "93.1vh"}} className=" container-fluid position-relative">
         <div className="w-50 m-auto text-white position-absolute top-50 start-50 translate-middle mb-5">
-            <h1 className="text-center mb-5">Registeration</h1>
-    <form onSubmit={(e) => submitUserData(e)} className="mb-5">
+            <h1 className="text-center mb-5 text-danger">Registeration</h1>
+    <form onSubmit={(e) => submitUserData(e)} className="mb-5 text-danger">
     <div className="">
     <label  className="form-label text-center ms-3 mb-3">Name</label>
-    <input name="Name"  onChange ={(e) => changeData(e)} type="text" className="form-control"  />
+    <input name="Name"  onChange ={(e) => changeData(e)} type="text" className="form-control border border-danger"  />
     <p>{error.NameErr}</p>
   </div>
   <div className="mb-3">
     <label  className="form-label text-center ms-3 mb-3">Email</label>
-    <input name="email"  onChange ={(e) => changeData(e)} type="email" className="form-control"  />
+    <input name="email"  onChange ={(e) => changeData(e)} type="email" className="form-control border border-danger"  />
     <p>{error.emailErr}</p>
   </div>
   <div className="mb-3">
     <label  className="form-label text-center ms-3 mb-3">User Name</label>
-    <input name="userName"  onChange ={(e) => changeData(e)} type="text" className="form-control"  />
+    <input name="userName"  onChange ={(e) => changeData(e)} type="text" className="form-control border border-danger"  />
     <p>{error.userNameErr}</p>
   </div>
   <div className="mb-3">
     <label  className="form-label ms-3 mb-3">Password</label>
-    <input name="password"  onChange = {(e) => changeData(e)} type="password" className="form-control" />
+    <input name="password"  onChange = {(e) => changeData(e)} type="password" className="form-control border border-danger" />
     <p >{error.passwordErr}</p>
   </div>
   <div className="mb-3">
     <label  className="form-label ms-3 mb-3">Confirm Password</label>
-    <input name="ConfirmPassword"  onChange = {(e) => changeData(e)} type="password" className="form-control" />
+    <input name="ConfirmPassword"  onChange = {(e) => changeData(e)} type="password" className="form-control border border-danger" />
     <p >{error.confirmPasswordErr}</p>
   </div>
   <div className="text-center m-auto mt-5 ">
-  <button type="submit" className="btn btn-secondary w-25 rounded">Submit</button>
+  <button type="submit" className="btn btn-danger w-25 rounded">Submit</button>
   </div>
 </form>
         </div>

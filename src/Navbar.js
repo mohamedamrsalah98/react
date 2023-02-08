@@ -17,7 +17,7 @@ const {theme, setTheme}=useContext(ThemeContext)
     return(
     
 
-<nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+ <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div className="container d-flex justify-content-between">
   <Link className="navbar-brand fs-3" to={"/"}>Movies</Link>
     <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,9 +47,10 @@ const {theme, setTheme}=useContext(ThemeContext)
         </li>
     
         <li className="ps-2 ms-5"> 
-              <input className=" " type={"checkbox"}  checked={theme === 'light'} onChange={(e) => {setTheme(e.target.checked ? 'light' : 'dark')}}/>
-              </li>
-        
+            <i onClick={(e) => {setTheme(e.target.value == 'light' ? 'light' : 'dark')}} className="fa-solid fa-moon text-light fs-2 mt-2 position-absalute"></i>
+            <i onClick={(e) => {setTheme(e.target.value == 'dark' ? 'dark' : 'light')}} className="fa-solid fa-sun text-light fs-2 ms-3 position-absalute"></i>
+        </li>
+  
       </ul>
     </div>
   </div>

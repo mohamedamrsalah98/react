@@ -65,22 +65,22 @@ const submitUserData = (e) => {
 // ==================================== return ====================================
 
     return (
-    <div style={{height : "93.1vh"}} className=" container-fluid bg-dark position-relative">
-        <div className="w-50 m-auto text-white position-absolute top-50 start-50 translate-middle mb-5">
-        <h1 className="text-center mb-5">Login</h1>
+    <div style={{height : "93.1vh"}} className=" container-fluid  position-relative ">
+        <div className="w-50 m-auto text-white position-absolute top-50 start-50 translate-middle mb-5 text-danger">
+        <h1 className="text-center mb-5 text-danger">Login</h1>
     <form onSubmit={(e) => submitUserData(e)} className="mb-5">
   <div className="my-5">
-    <label  className="form-label text-center ms-4 mb-4">Email address</label>
-    <input name="email"  onChange ={(e) => changeData(e)} type="email" className="form-control"  />
+    <label  className="form-label text-center ms-4 mb-4 text-danger">Email address</label>
+    <input name="email"  onChange ={(e) => changeData(e)} type="email" className="form-control border border-danger"  />
     <p>{error.emailErr}</p>
   </div>
   <div className="my-5">
-    <label  className="form-label text-center ms-4 mb-4">Password</label>
-    <input name="password"  onChange = {(e) => changeData(e)} type="password" className="form-control" />
+    <label  className="form-label text-center ms-4 mb-4 text-danger">Password</label>
+    <input name="password"  onChange = {(e) => changeData(e)} type="password" className="form-control border border-danger" />
     <p >{error.passwordErr}</p>
   </div>
   <div className="text-center m-auto mt-5 ">
-  <button disabled={error.emailErr || error.passwordErr && "disabled"} type="submit" className="btn btn-secondary w-25 rounded">Submit</button>
+  <button disabled={error.emailErr || error.passwordErr && "disabled"} type="submit" className="btn btn-danger w-25 rounded">Submit</button>
   </div>
 </form>
         </div>
