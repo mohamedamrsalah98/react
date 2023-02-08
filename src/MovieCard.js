@@ -1,7 +1,9 @@
 
 
+
 function MovieCard(props){
     
+
     return(
       <div className="container-fluid bg-dark position-relative" style={{height : "93.1vh"}}>
 <div className="d-flex  position-absolute top-50 start-50 translate-middle ">
@@ -13,6 +15,7 @@ function MovieCard(props){
   <p  style={{marginTop: "20%",marginLeft : "20%",width : "100%"}} className="card-text fs-5 ">{props.des}</p>
   </div>
 </div>
+<button className="btn btn-outline-primary">Add to card</button>
 </div>
     )
 }

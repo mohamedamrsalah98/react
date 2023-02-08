@@ -4,7 +4,7 @@ import MainCard from "./MainCard";
 
 function Home(){
 
-    // ===================== Fetch Main Data ===================== //
+  // ===================== Fetch Main Data ===================== //
 
     const [movies, setMovies] = useState([])
     useEffect(() => {
@@ -13,7 +13,7 @@ function Home(){
         .catch((err) => console.log(err))
     },[]) 
 
-    // ========================== search ===============================
+  // ========================== search ===============================
 
 const [keyword, setKeyword] = useState("m")
 useEffect(() => {
@@ -60,9 +60,9 @@ const PaginationProduct=(e) => {
     </div>
 {/* // ===================== Fetch Main Data (MainCard) ===================== // */}
 
-                {movies.map((movie) => {
+                {movies.map((movie,index) => {
         return    <div key={movie.id} className="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
-                    <MainCard img={movie.poster_path} des={movie.overview} title={movie.title} id={movie.id}/>
+                    <MainCard index={index} img={movie.poster_path} des={movie.overview} title={movie.title} id={movie.id}/>
                 </div>   
                 })}
 
